@@ -1,5 +1,7 @@
 package com.book.set;
 
+import java.util.HashSet;
+
 class A
 {
 	@Override
@@ -29,7 +31,7 @@ class C
 	@Override
 	public int hashCode()
 	{
-		return 1;
+		return 2;
 	}
 }
 
@@ -37,6 +39,15 @@ public class HashSetTest
 {
 	public static void main(String[] args)
 	{
+		HashSet<Object> books = new HashSet<>();
 		
+		books.add(new A());
+		books.add(new A());
+		books.add(new B());
+		books.add(new B());
+		books.add(new C());
+		books.add(new C());
+		
+		System.out.println("books: " + books);
 	}
 }
