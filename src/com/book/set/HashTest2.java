@@ -40,12 +40,6 @@ class R
 	}
 	
 	@Override
-	public int hashCode()
-	{
-		return this.count;
-	}
-
-	@Override
 	public String toString()
 	{
 		return "R[count: " + count + "]";
@@ -66,9 +60,14 @@ public class HashTest2
 		
 		System.out.println("books: " + books);
 		
-		for(Iterator<Object> it = books.iterator(); it.hasNext(); )
-		{
-			
-		}
+		Iterator<Object> it = books.iterator(); 
+		R first = (R)it.next();
+		first.setCount(-3);
+		
+		System.out.println("after set, books: " + books);
+		
+		System.out.println(books.remove(-3));
+		System.out.println("after delete, books: " + books);		
+		System.out.println("books.contains(new R(-3))? : " + books.contains(new R(-3)));
 	}
 }
