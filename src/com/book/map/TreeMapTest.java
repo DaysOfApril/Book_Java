@@ -73,7 +73,7 @@ public class TreeMapTest
 		
 		System.out.println(treeMap1.higherKey(new R(4)));
 		
-		System.out.println(treeMap1.lowerEntry(new R(6)));
+		System.out.println(treeMap1.lowerEntry(new R(6))); 
 		
 		System.out.println(treeMap1.subMap(new R(3), new R(7)));
 	}
